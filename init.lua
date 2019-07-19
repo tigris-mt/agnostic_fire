@@ -374,7 +374,7 @@ elseif minetest.get_modpath("aurum") then
 	minetest.register_craft{
 		output = "fire:flint_and_steel",
 		recipe = {
-			{"aurum_base:gravel", "aurum_base:iron_ingot"},
+			{"aurum_base:gravel", "aurum_ore:iron_ingot"},
 		},
 	}
 end
