@@ -287,6 +287,9 @@ end
 function fire.update_sounds_around(pos)
 end
 
+-- Called when fire spreads to a position. Override in other mods.
+function fire.on_spread(pos)
+end
 
 --
 -- ABMs
@@ -307,6 +310,7 @@ if fire_enabled then
 			local p = minetest.find_node_near(pos, 1, {"air"})
 			if p then
 				minetest.set_node(p, {name = "fire:basic_flame"})
+				fire.on_spread(p)
 			end
 		end,
 	})
